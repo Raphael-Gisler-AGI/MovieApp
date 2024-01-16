@@ -1,13 +1,16 @@
 package com.example.movies.dao
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.movies.entities.Movie
+import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface MovieDao {
     @Insert
-    fun insert(movie: Movie)
+    suspend fun insert(movie: Movie)
 
-    @Query("SELECT name FROM movie")
-    fun getAll(): List<Movie>
+    @Query("SELECT id, name FROM movie")
+    fun getAll(): Flow<List<Movie>>
 }

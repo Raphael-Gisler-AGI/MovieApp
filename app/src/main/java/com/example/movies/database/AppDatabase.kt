@@ -7,5 +7,5 @@ import com.example.movies.entities.Movie
 
 @Database(entities = [Movie::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun movieDao(): MovieDao
+    abstract val movieDao: MovieDao
 }
