@@ -17,14 +17,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import coil.compose.AsyncImage
 import com.example.movies.R
-=======
+//=======
 import androidx.compose.ui.unit.sp
 import com.example.movies.MovieEvent
 import com.example.movies.MovieState
->>>>>>> 97769682b9c3239c17c044fbb7db71cd7d594000
+//>>>>>>> 97769682b9c3239c17c044fbb7db71cd7d594000
 
 @Composable
 fun PersonalMovies(state: MovieState, onEvent: (MovieEvent) -> Unit) {
