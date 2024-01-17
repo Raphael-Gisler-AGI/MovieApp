@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.movies.pages.AllMovies
+import com.example.movies.pages.DetailMovie
 import com.example.movies.pages.PersonalMovies
 
 @Composable
@@ -16,7 +17,10 @@ fun NavigationHost(navController: NavHostController) {
             PersonalMovies()
         }
         composable(NavigationItem.AllMovies.route) {
-            AllMovies()
+            AllMovies(navController)
+        }
+        composable("movie/{id}") {backStackEntry ->
+            DetailMovie(navController, backStackEntry.arguments?.getString("id"))
         }
     }
 }
